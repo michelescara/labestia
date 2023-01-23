@@ -1,5 +1,2 @@
 discord.py
-random.py
-string.py
-asyncio.py
 captcha.py
