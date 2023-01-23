@@ -38,6 +38,11 @@ class BotCommands(commands.Cog):
         deleted = await ctx.channel.purge(limit=num_messages+1)
         await ctx.response.send_message(f"Cancellati {len(deleted)} messaggi.", delete_after=5)
 
+    @app_commands.checks.has_permissions(administrator=True)
+    @app_commands.command(name='dm', description= "Invia un messaggio in privato all'utente indicato.")
+    async def clear(self, ctx, member: discord.Member, message: discord.Message):      
+        await member.send(message)
+
 async def setup(bot):
     await bot.add_cog(BotCommands(bot))
     
