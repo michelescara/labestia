@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 from server_logger import ServerLogger
@@ -16,5 +17,5 @@ async def on_ready():
     await bot.load_extension('captcha_generation')
     await bot.tree.sync()
 
-
-bot.run("MTA2MjMyMDk1NTU4MzYzMTM3MA.G1u-yW.lgOpEvqdvRZj-n6gP8WhE2fJ609Ms-GsINtkN0")
+TOKEN=os.environ.get("TOKEN")
+bot.run(TOKEN)
