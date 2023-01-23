@@ -40,7 +40,7 @@ class BotCommands(commands.Cog):
 
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.command(name='dm', description= "Invia un messaggio in privato all'utente indicato.")
-    async def dm(self, ctx, member: discord.Member, message):      
+    async def dm(self, ctx, member: discord.Member, message: str):      
         await member.send(message)
 
 async def setup(bot):
