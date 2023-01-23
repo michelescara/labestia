@@ -1,6 +1,5 @@
 import asyncio
 import discord
-import channel_manager
 from discord.ext import commands
 from discord import app_commands
 from datetime import date
