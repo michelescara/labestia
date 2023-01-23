@@ -1,5 +1,5 @@
 discord.py
-random
-string
-asyncio
+random.py
+string.py
+asyncio.py
 captcha.py
